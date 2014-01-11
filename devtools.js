@@ -5,7 +5,7 @@
 // Create a tab in the devtools area
 
 var page_getShortcuts = function() {
-  var data = document.querySelectorAll('[inspect=\"true\"]');
+  var data = document.querySelectorAll('[data-inspect=\"true\"]');
   return data;
 };
 
