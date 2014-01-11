@@ -14,7 +14,7 @@ Installation
 Usage
 ===
 
-Add inspect='true' to all elements that you want to add to the list. Saves a lot of time reaching elements if it's nested deep in the DOM. You can then right-click the items and select "Reveal in Elements panel" to inspect them.
+Add inspect="true" or the attribute data-inspect to all elements that you want to add to the list. Saves a lot of time reaching elements if it's nested deep in the DOM. You can then right-click the items and select "Reveal in Elements panel" to inspect them.
 
 Screenshot
 ====

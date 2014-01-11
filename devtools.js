@@ -5,8 +5,7 @@
 // Create a tab in the devtools area
 
 var page_getShortcuts = function() {
-  var data = document.querySelectorAll('[inspect=\"true\"]');
-  return data;
+  return document.querySelectorAll('[inspect="true"],[data-inspect]');
 };
 
 chrome.devtools.panels.elements.createSidebarPane(
