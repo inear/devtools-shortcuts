@@ -6,17 +6,25 @@
 
 var page_getShortcuts = function() {
 
-  var data = document.querySelectorAll('[inspect]');
+  var data = document.querySelectorAll('[inspect],[data-inspect]');
   var matchingElements = [];
 
   for (var i = data.length - 1; i >= 0; i--) {
-    var value = data[i].getAttribute('inspect').toString();
-    if( value === 'true' || value === '' )  {
+
+    if( data[i].hasAttribute('inspect') ) {
+      var value = data[i].getAttribute('inspect') + "";
+      if( value === 'true' || value === '' )  {
+        matchingElements.unshift(data[i]);
+      }
+    }
+    else if( data[i].dataset['inspect'] ) {
       matchingElements.unshift(data[i]);
     }
+
   }
 
   return matchingElements;
+
 };
 
 chrome.devtools.panels.elements.createSidebarPane(
